@@ -1,10 +1,7 @@
 import  { useEffect, useRef, useState, type FormEvent } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import axios from 'axios';
-import RavenCallAlert from '../assets/1.png'
-import RavenCall from '../assets/5.png'
-import RavenHome from '../assets/3.png'
-import WatchTower from '../assets/4.png'
+
 
 import battleforge from '../assets/Mockups/battleforge.png'
 import buddy from '../assets/Mockups/buddy.png'
@@ -12,7 +9,7 @@ import challenge from '../assets/Mockups/challenge.png'
 import clan from '../assets/Mockups/clan.png'
 import request from '../assets/Mockups/request.png'
 import share from '../assets/Mockups/share.png'
-import { Play, Apple , Globe} from "lucide-react";
+import { Play, Apple } from "lucide-react";
 
 import {
   Carousel,
@@ -63,14 +60,7 @@ const screenshots = [
 ];
 
 
-const mockCrimeStats = [
-  { label: "Registered Crimes (2024)", value: 174253 },
-  { label: "Murder decrease (Q1 2025)", value: 16 },
-  { label: "Robbery decrease (Q1 2025)", value: 16 },
-  { label: "Dacoity increase (2024)", value: 23 },
-  { label: "Burglary increase (2024)", value: 25 },
-  { label: "Crime rate per 100k", value: 1586 },
-]
+
 
 export default function LandingPage() {
   const [visible, setVisible] = useState(true)
