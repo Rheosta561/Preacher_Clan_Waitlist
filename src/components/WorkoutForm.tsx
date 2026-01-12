@@ -19,7 +19,7 @@ export default function WorkoutForm({
     <div className="space-y-4">
       <Input type="file" accept="image/*" onChange={(e) => setImage(e.target.files?.[0])} />
 
-      {workout.map(( i: number) => (
+      {workout.map((_ :any , i: number) => (
         <div key={i} className="flex gap-2">
           <Input
             placeholder="Exercise"
