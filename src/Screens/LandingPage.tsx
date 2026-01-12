@@ -11,6 +11,7 @@ import request from '../assets/Mockups/request.png'
 import share from '../assets/Mockups/share.png'
 import { Play, Apple } from "lucide-react";
 
+
 import {
   Carousel,
   CarouselContent,
@@ -23,6 +24,7 @@ import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
 import { Separator } from "../components/ui/separator"
 import FeatureSlider from "../components/FeatureSlider";
+import EkRepAurDialog from "../components/EkRepAurDialog";
 
 const taglines = [
   "Born to conquer?",
@@ -71,6 +73,8 @@ export default function LandingPage() {
   const [count, setCount] = useState<number>(0)
   const [loading, setLoading] = useState<boolean>(false)
   const formRef = useRef<HTMLFormElement>(null)
+
+
 
   useEffect(() => {
     const token = localStorage.getItem("token")
@@ -147,7 +151,7 @@ export default function LandingPage() {
               {/* What is PreacherClan */}
               <section className="pt-20 text-center max-w-4xl mx-auto px-4 space-y-2" id='home'>
                 <h2 className="text-lg font-semibold font-Montserrat">PreacherClan</h2>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed ">
                   <span className="text-primary font-medium font-Montserrat" id='about'>#EkRepAur</span>
                   <br />
                   PreacherClan is a modern fitness tribe where lifters unite, grow stronger, and hold each other accountable.
@@ -181,6 +185,32 @@ From sharing training splits to finding gym partners, every member becomes part 
                   <CarouselNext className="absolute right-[-16px] top-1/2 -translate-y-1/2 z-10" />
                 </Carousel>
               </section>
+              {/*Ek rep aur movement*/}
+
+<section className="py-8 -mt-8 px-4 max-w-3xl mx-auto text-center space-y-4">
+  <h2 className="text-3xl tracking-tight  font-semibold font-Montserrat">
+    #EkRepAur
+  </h2>
+
+  <p className="text-sm text-muted-foreground leading-relaxed">
+    A movement for lifters who show up.
+    <br />
+    Upload your workout. Share your effort. Inspire the Clan.
+    <br />
+    This is how discipline spreads.
+  </p>
+
+
+
+</section>
+<div className="flex w-full justify-center -mt-2">
+  <EkRepAurDialog/>
+
+</div>
+
+
+
+
 
               {/* Crime Stats */}
              <FeatureSlider/>
