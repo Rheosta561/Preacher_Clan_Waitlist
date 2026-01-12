@@ -5,13 +5,29 @@ import {  Send, Twitter, Instagram } from "lucide-react"
 
 export default function ShareActions({ imageUrl }: any) {
   const isMobile = /iPhone|Android/i.test(navigator.userAgent)
+const download = async () => {
+  const res = await fetch(imageUrl)
+  const blob = await res.blob()
+  const file = new File([blob], "ekrepaur.png", { type: "image/png" })
 
-  const download = () => {
-    const a = document.createElement("a")
-    a.href = imageUrl
-    a.download = "ekrepaur.png"
-    a.click()
+  // iOS / Mobile Safari → Share Sheet
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    await navigator.share({
+      files: [file],
+      title: "EkRepAur Workout Card",
+    })
+    return
   }
+
+  // Desktop fallback
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement("a")
+  a.href = url
+  a.download = "ekrepaur.png"
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
 
   const shareWhatsApp = () => {
     // WhatsApp does NOT support base64 images directly.
