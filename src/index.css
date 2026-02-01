@@ -69,6 +69,9 @@ html {
 }
 
 @layer base {
+  html {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
   * {
     @apply border-border;
   }
@@ -80,7 +83,10 @@ html {
 
 
 @font-face {
-  font-family: "Monteserrat";
+  font-family: "Montserrat";
   src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: 100 900; 
+  font-style: normal;
+  font-display: swap;
 }
+

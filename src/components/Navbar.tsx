@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <div className="w-full fixed top-0 z-30 right-0 left-0 bg-opacity-70  px-4 py-2 border-b border-border  bg-background flex items-center justify-between">
 
-      <div className="text-xl font-bold flex items-center font-Montserrat ">
+      <div className="text-xl font-semibold tracking-tight flex items-center font-Montserrat ">
         <img
           src={Logo}
           alt="Logo"

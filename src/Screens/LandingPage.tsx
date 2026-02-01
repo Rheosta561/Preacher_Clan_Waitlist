@@ -9,7 +9,10 @@ import challenge from '../assets/Mockups/challenge.png'
 import clan from '../assets/Mockups/clan.png'
 import request from '../assets/Mockups/request.png'
 import share from '../assets/Mockups/share.png'
+import thrud from "../assets/thrud.png";
 import { Play, Apple } from "lucide-react";
+import { Globe} from "lucide-react";
+
 
 
 import {
@@ -126,7 +129,7 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground font-sans">
       <div className="min-h-[95vh] flex items-center justify-center px-4">
         <AnimatePresence mode="wait">
           {visible ? (
@@ -219,19 +222,22 @@ From sharing training splits to finding gym partners, every member becomes part 
 
 
 <div className="flex flex-col sm:flex-row justify-center items-center text-center text-sm text-muted-foreground mb-4 gap-2 px-4">
- {/* <a
-    href="/assets/raven_saves_01.apk"
-    download={true}
+ <a
+    href="https://github.com/Rheosta561/Preacher_Clan_Application/releases/tag/v1.0.0"
+
 
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center text-primary underline hover:text-primary/80 transition"
   >
     <Globe className="w-4 h-4 mr-1" /> Download APK
-  </a> */}
+  </a>
   {/* <span className="hidden sm:inline mx-1">|</span> */}
 
   {/* Google Play - disabled */}
+  {/* Beta Website CTA */}
+
+
   <span className="flex items-center text-muted-foreground cursor-not-allowed">
     <Play className="w-4 h-4 mr-1" /> Google Play (Coming soon)
   </span>
@@ -248,6 +254,76 @@ From sharing training splits to finding gym partners, every member becomes part 
   {/* Website APK download - enabled */}
  
 </div>
+{/* Thrud Promotion Section */}
+<section className="py-16 px-4 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+    {/* Image */}
+    <motion.div
+      initial={{ opacity: 0, x: -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex justify-center"
+    >
+      <img
+        src={thrud}
+        alt="Thrud Gym Management Software"
+        className="w-full max-w-sm md:max-w-md rounded-xl shadow-lg"
+      />
+    </motion.div>
+
+    {/* Text */}
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="space-y-4 text-center md:text-left"
+    >
+      <h2 className="text-3xl font-semibold font-Montserrat tracking-tight">
+        Forge Stronger Gyms with <span className="text-primary">Thrud</span>
+      </h2>
+
+      <p className="text-sm text-muted-foreground leading-relaxed">
+        If you own a gym — this is your weapon.
+        <br />
+        <span className="font-medium text-foreground">
+          Thrud
+        </span>{" "}
+        is a community-first, autonomous gym management system —
+        built for modern warriors who lead from the front.
+      </p>
+
+      <p className="text-sm text-muted-foreground leading-relaxed">
+        Manage members. Track activity. Empower your lifters.
+        <br />
+        Less admin. More iron. More loyalty.
+      </p>
+
+      <div className="pt-2">
+        <a
+          href="https://thrud.preacherclan.in" 
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="px-6 py-2 rounded-md bg-primary text-primary-foreground font-medium hover:opacity-90 transition">
+            Try Thrud for Your Gym
+          </button>
+        </a>
+      </div>
+
+      <p className="text-xs text-muted-foreground italic">
+        Built for gym owners who believe strength is forged together.
+      </p>
+    </motion.div>
+
+  </div>
+</section>
+
+ <Separator className="my max-w-md mx-auto mb-8 mt-8" />
+
+
 
               {/* Waitlist */}
               <section className="py-4 px-4 max-w-xl mx-auto text-center" id="waitlist">
