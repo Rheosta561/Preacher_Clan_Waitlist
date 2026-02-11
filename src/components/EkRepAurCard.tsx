@@ -37,7 +37,7 @@ export default function EkRepAurCard({
             />
           </div>
 
-          <h1 className="text-2xl text-center font-Montserrat tracking-tighter">
+          <h1 className="text-2xl text-center font-Montserrat font-semibold tracking-tighter">
             #EkRepAur
           </h1>
 
@@ -45,7 +45,7 @@ export default function EkRepAurCard({
             <div className="flex flex-col text-xs gap-1">
               {workout.map((item: any, i: number) => (
                 <div key={i} className="flex justify-between gap-2">
-                  <p>{item.name}</p>
+                  <p className="font-semibold">{item.name}</p>
                   <p className="font-bold">
                     {item.sets}X{item.reps}
                   </p>
@@ -54,8 +54,8 @@ export default function EkRepAurCard({
             </div>
 
             <div className="text-sm font-Montserrat">
-              <p className="tracking-tighter">{dayFromDate}</p>
-              <p className="underline text-xs">preacherclan.in</p>
+              <p className="tracking-tighter font-semibold">{dayFromDate}</p>
+              <p className="underline text-xs font-semibold">preacherclan.in</p>
             </div>
           </div>
         </div>
